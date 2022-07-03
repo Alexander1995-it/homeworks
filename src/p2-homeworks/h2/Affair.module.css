@@ -1,0 +1,19 @@
+.affair__wrapper {
+    display: flex;
+}
+
+.affair__column {
+    width: 140px;
+    color: darkslateblue;
+    font-size: 20px;
+}
+
+.priority__column {
+    width: 100px;
+    color: darkslateblue;
+    font-size: 20px;
+}
+
+.btn__column {
+
+}
