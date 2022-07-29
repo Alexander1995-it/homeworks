@@ -11,3 +11,14 @@
 .testSpanError {
     color: blue;
 }
+
+
+.alternativeInput {
+ outline: none;
+    border: 2px solid green;
+}
+
+.styleInput {
+
+}
+

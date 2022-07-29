@@ -18,7 +18,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('')
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        setName(e.currentTarget.value)
+        setName(e.currentTarget.value.trim())
+        setError('')
     }
     const addUser = () => {
         if (name) {
@@ -28,7 +29,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         } else {
             setError('Required field')
         }
-
     }
 
     const totalUsers = users.length

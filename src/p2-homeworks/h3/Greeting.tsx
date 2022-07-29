@@ -15,25 +15,27 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, setError} // деструктуризация пропсов
 ) => {
     const inputClass = error ? s.error : ''
+
     const onBlurErrorHandler = () => {
-        if (!name) {
-            setError('Required field')
-        }
-    }
-    const onFocusHandler = () => {
-        setError('')
-    }
-    return (
+        name || setError('Required field')
+}
+
+return (
+    <div>
+        <input onBlur={onBlurErrorHandler}
+               value={name}
+               onChange={setNameCallback}
+               className={inputClass}
+        />
+        <button onClick={addUser}>add</button>
+        <span>{totalUsers}</span>
         <div>
-            <input onFocus={onFocusHandler} onBlur={onBlurErrorHandler} value={name} onChange={setNameCallback}
-                   className={inputClass}/>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
-            <div>
-                <span style={{color: 'red'}}>{error}</span>
+            <div style={{height: '21px', color: 'red'}}>
+                {error}
             </div>
         </div>
-    )
+    </div>
+)
 }
 
 export default Greeting
