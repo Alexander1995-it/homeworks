@@ -8,7 +8,7 @@ import AlternativeSuperInputText from "./common/c1-SuperInputText/AlternativeSup
 function HW4() {
     const [text, setText] = useState<string>('')
     const error = text ? '' : 'error'
-    const [errorAlternative, setErrorAlternative] = useState('c')
+    const [errorAlternative, setErrorAlternative] = useState('')
 
     // const showErrorAlternative =
 
